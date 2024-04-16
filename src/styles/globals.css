@@ -1,26 +1,18 @@
-html,
+/* globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 여기에 Tailwind에서 제공하지 않는 글로벌 스타일을 추가하세요. */
+/* 예를 들어, 사이트 전체에 걸친 글로벌 폰트 스타일링이나 색상 변수 등입니다. */
+
+:root {
+  --main-color: #0070f3;
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #f5f5f5;
+  /* 이미 Tailwind의 base 스타일에 포함되어 있으므로 불필요한 부분은 제거 */
 }
 
-* {
-  box-sizing: border-box;
-}
-
-h1 {
-  text-align: center;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: flex;
-  align-items: center;
-}
+/* ... 기타 글로벌 스타일 ... */
