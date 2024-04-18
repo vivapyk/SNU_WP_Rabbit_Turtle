@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
-import TodoItem from "@/components/TodoItem";
+import React, { useState } from 'react';
+import { Input, Button } from 'shadcn-ui';
 
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
@@ -57,29 +57,28 @@ const TodoList = () => {
   return (
     <div className="mx-auto max-w-sm p-5 bg-white rounded-lg shadow">
       <h1 className="text-center text-2xl font-bold">Todo List</h1>
-      <input
-        type="text"
+      <Input
         className="w-full p-1 mb-2 text-black border-2 border-gray-200 rounded shadow focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder="Add new todo"
       />
-      <button
+      <Button
         className="w-full p-1 mb-2 bg-blue-500 text-white rounded hover:bg-blue-600 active:translate-y-1 transform transition mr-2"
         onClick={addTodo}
       >
         Add Todo
-      </button>
-
-      <button
+      </Button>
+  
+      <Button
         className="w-full p-1 bg-red-500 text-white rounded hover:bg-red-600 active:translate-y-1 transform transition"
         onClick={deleteAllTodos}
       >
         Delete All
-      </button>
+      </Button>
       <ul className="list-none p-0">
         {todos.map((todo) => (
-          <TodoItem
+          <DynamicComponentWithNoSSR
             key={todo.id}
             todo={todo}
             onToggle={() => toggleTodo(todo.id)}
