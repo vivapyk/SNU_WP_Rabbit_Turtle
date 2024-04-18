@@ -1,9 +1,4 @@
-import TodoList from "@/components/TodoList";
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
 
-export default function Home() {
-  return (
-    <div>
-      <TodoList />
-    </div>
-  );
-}
+export default nextConfig;
