@@ -6,7 +6,7 @@ const TodoItem = ({ todo, onToggle, onDelete }) => {
       <input
         type="checkbox"
         checked={todo.completed}
-        onChange={onToggle}
+        onChange={() => onToggle(todo.id)} // todo 객체 대신 todo.id를 전달
         className="form-checkbox h-5 w-5 text-blue-600"
       />
       <span
@@ -16,7 +16,7 @@ const TodoItem = ({ todo, onToggle, onDelete }) => {
       </span>
       <button
         className="bg-red-500 text-white p-1 rounded hover:bg-red-600 active:translate-y-1 transform transition"
-        onClick={onDelete}
+        onClick={() => onDelete(todo.id)} // todo 객체 대신 todo.id를 전달
       >
         Delete
       </button>
