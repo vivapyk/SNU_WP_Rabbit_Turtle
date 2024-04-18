@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Input, Button } from 'shadcn-ui';
+import TodoItem from '@/components/TodoItem';
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
 
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
@@ -78,7 +80,7 @@ const TodoList = () => {
       </Button>
       <ul className="list-none p-0">
         {todos.map((todo) => (
-          <DynamicComponentWithNoSSR
+          <TodoItem
             key={todo.id}
             todo={todo}
             onToggle={() => toggleTodo(todo.id)}
