@@ -91,7 +91,7 @@ const TodoList = () => {
       {todos.length === 0 && (
       <div className="text-center mt-5">
         <img src="empty-list-image.png" alt="Empty list" className="mx-auto w-1/2" />
-        <p className="text-lg mt-2">할 일이 없습니다.</p>
+        <p className="text-lg mt-2">텅~ 비었어요</p>
       </div>
       
       )}
