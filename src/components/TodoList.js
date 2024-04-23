@@ -73,7 +73,7 @@ const TodoList = () => {
       </Button>
   
       <Button
-        className="w-full p-1 bg-blue-500 text-white rounded hover:bg-red-600 active:translate-y-1 transform transition"
+        className="w-full p-1 bg-blue-500 text-white rounded hover:bg-blue-600 active:translate-y-1 transform transition"
         onClick={deleteAllTodos}
       >
         Delete All
