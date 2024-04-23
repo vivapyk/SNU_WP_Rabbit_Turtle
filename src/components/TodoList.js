@@ -63,6 +63,7 @@ const TodoList = () => {
         className="w-full p-1 mb-2 text-black border-2 border-gray-200 rounded shadow focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
         value={input}
         onChange={(e) => setInput(e.target.value)}
+        onKeyDown={(e) => { if (e.key === 'Enter') addTodo(); }}
         placeholder="Add new todo"
       />
       <Button
