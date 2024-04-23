@@ -2,7 +2,7 @@ import React from "react";
 
 const TodoItem = ({ todo, onToggle, onDelete }) => {
   return (
-    <li className="flex items-center justify-between p-2 mb-2 bg-gray-100 rounded">
+    <li className="flex items-center justify-between p-2 mb-2 bg-gray-100 rounded" onClick={() => onToggle(todo.id)}>
       <input
         type="checkbox"
         checked={todo.completed}
