@@ -66,7 +66,7 @@ const TodoList = () => {
         placeholder="Add new todo"
       />
       <Button
-        className="w-full p-1 mb-2 bg-blue-500 text-white rounded hover:bg-blue-600 active:translate-y-1 transform transition mr-2"
+        className="w-full p-1 mb-2 bg-green-500 text-white rounded hover:bg-blue-600 active:translate-y-1 transform transition mr-2"
         onClick={addTodo}
       >
         Add Todo
